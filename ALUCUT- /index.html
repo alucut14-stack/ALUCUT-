@@ -1,1 +1,92 @@
 
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ALUCUT</title>
+
+<style>
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f4f4f4;
+    margin:0;
+    padding:20px;
+}
+.container{
+    max-width:500px;
+    margin:auto;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,.2);
+}
+h1{
+    text-align:center;
+    color:#0066cc;
+}
+input,select,button{
+    width:100%;
+    padding:12px;
+    margin-top:10px;
+    font-size:18px;
+}
+button{
+    background:#0066cc;
+    color:white;
+    border:none;
+    border-radius:6px;
+}
+#result{
+    margin-top:20px;
+    background:#eee;
+    padding:15px;
+    border-radius:8px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>ALUCUT</h1>
+
+<label>Σειρά</label>
+<select>
+<option>ESS34</option>
+</select>
+
+<label>Πλάτος (mm)</label>
+<input id="width" type="number">
+
+<label>Ύψος (mm)</label>
+<input id="height" type="number">
+
+<button onclick="calc()">Υπολογισμός</button>
+
+<div id="result">
+Δώσε διαστάσεις.
+</div>
+
+</div>
+
+<script>
+
+function calc(){
+
+let w=Number(document.getElementById("width").value);
+let h=Number(document.getElementById("height").value);
+
+document.getElementById("result").innerHTML=
+"<h3>Αποτελέσματα</h3>"+
+"Πλάτος: "+w+" mm<br>"+
+"Ύψος: "+h+" mm<br><br>"+
+"Η λειτουργία ESS34 θα προστεθεί στο επόμενο βήμα.";
+
+}
+
+</script>
+
+</body>
+</html>
