@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ALUCUT</title>
+
+<style>
+body{
+font-family:Arial,sans-serif;
+background:#f2f2f2;
+text-align:center;
+padding:20px;
+}
+
+h1{
+color:#0066cc;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:10px;
+max-width:400px;
+margin:auto;
+box-shadow:0 0 10px rgba(0,0,0,.2);
+}
+
+input{
+width:90%;
+padding:10px;
+margin:10px 0;
+font-size:18px;
+}
+
+button{
+padding:12px 25px;
+font-size:18px;
+background:#0066cc;
+color:white;
+border:none;
+border-radius:8px;
+}
+
+#result{
+margin-top:20px;
+font-size:22px;
+font-weight:bold;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>ALUCUT</h1>
+
+<div class="card">
+
+<h2>ESS34</h2>
+
+<input id="width" type="number" placeholder="Πλάτος">
+
+<input id="height" type="number" placeholder="Ύψος">
+
+<button onclick="calc()">Υπολογισμός</button>
+
+<div id="result"></div>
+
+</div>
+
+<script>
+
+function calc(){
+
+let w=Number(document.getElementById("width").value);
+
+let h=Number(document.getElementById("height").value);
+
+document.getElementById("result").innerHTML=
+"Πλάτος: "+w+" mm<br>Ύψος: "+h+" mm";
+
+}
+
+</script>
+
+</body>
+</html>
