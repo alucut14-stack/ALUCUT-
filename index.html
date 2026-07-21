@@ -41,7 +41,12 @@ color:white;
 border:none;
 border-radius:8px;
 }
-
+select{
+    width:90%;
+    padding:10px;
+    margin:10px 0;
+    font-size:18px;
+}
 #result{
 margin-top:20px;
 font-size:22px;
@@ -58,7 +63,15 @@ font-weight:bold;
 <div class="card">
 
 <h2>ESS34</h2>
+<label><b>Τύπος Κατασκευής</b></label><br><br>
 
+<select id="type">
+    <option value="mono">Μονόφυλλο Συρόμενο</option>
+    <option value="difyllo">Δίφυλλο Συρόμενο</option>
+    <option value="stathero">Σταθερό</option>
+</select>
+
+<br>
 <input id="width" type="number" placeholder="Πλάτος">
 
 <input id="height" type="number" placeholder="Ύψος">
@@ -72,13 +85,16 @@ font-weight:bold;
 <script>
 
 function calc(){
-
+let type = document.getElementById("type").value;
 let w=Number(document.getElementById("width").value);
 
 let h=Number(document.getElementById("height").value);
 
-document.getElementById("result").innerHTML=
-"Πλάτος: "+w+" mm<br>Ύψος: "+h+" mm";
+document.getElementById("result").innerHTML =
+"Τύπος: " + type +
+"<br>Πλάτος: " + w + " mm" +
+"<br>Ύψος: " + h + " mm";
+
 
 }
 
